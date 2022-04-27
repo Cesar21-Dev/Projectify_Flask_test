@@ -25,7 +25,6 @@ def getProjects(mongoDB):
     for i in range(0, len(pj)):
         pj[i]["_id"] = str(pj[i]["_id"])
         data.append(pj[i])
-    print(data)
     return data
 
 
@@ -39,7 +38,12 @@ def getUsers(filtro, username, mongoDB):
 
 # Funcion para consulta preyectos con % de dedicacion reportados por el usuario
 def getProjectUser(current_user, mongoDB):
-    return mongoDB.find({"username": current_user})
+    pj = list(mongoDB.find({"username": current_user}))
+    data = []
+    for i in range(0, len(pj)):
+        pj[i]["_id"] = str(pj[i]["_id"])
+        data.append(pj[i])
+    return data
 
 
 # Funcion para validar si en la base de datos se encuentra reportado en la presente semana el projecto
