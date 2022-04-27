@@ -14,11 +14,6 @@ cors = CORS(app)
 
 app.config["SECRET_KEY"] = "thisissecret"
 app.config["CORS_HEADERS"] = "Content-Type"
-app.config["MYSQL_HOST"] = "localhost"
-app.config["MYSQL_USER"] = "root"
-app.config["MYSQL_PASSWORD"] = ""
-app.config["MYSQL_DB"] = "projectify"
-
 app.config[
     "MONGO_URI"
 ] = "mongodb+srv://MongoDB21:FH4wQnyRy4JaidST@cluster0.jz3of.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
@@ -174,4 +169,4 @@ def index():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, port=4000)
+    app.run(debug=True)
