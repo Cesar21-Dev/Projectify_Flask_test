@@ -10,11 +10,16 @@ Acontinuación se indica las funcionalidades de la Api:
 	- EL usuario puede visualizar todos los reporte de dedicación realizados por el.
 	- El usuario puede realizar la modificación de este porcentaje si se ecuentra en el mismo mes calendario cuando realizo el reporte.
 
-#### **Desarrollo:**
+#### **Desarrollo de la solución:**
+>Estructura de la aplicación:
 
-Base de datos:
+- **app.py**: Script principal.
+- **funtions.py**: Funciones de insertar y atualizar reporte de dedicación.
+- **mongoDB.py**: Funciones de consulta hacia la base de datos mongoDB Atlas.
 
-Ae creo una base de datos en MongoDB Atlas con el nombre ***Projectify_mongo.***, dentro de esta se crearo 3 colletions:
+> Base de datos:
+
+Se creo una base de datos en MongoDB Atlas con el nombre ***Projectify_mongo.***, dentro de esta se crearo 3 colletions:
 
 - projectify_projects: En esta  se encuetran todos los proyectos de la empresa tiene los argumentos ** _Id y name.**
 - projectify_report:  En esta se encuentran los  reporte realizados por los usuarios, tiene los argumentos _Id, percentage, date, project_name y username.
@@ -22,5 +27,44 @@ Ae creo una base de datos en MongoDB Atlas con el nombre ***Projectify_mongo.***
 
 #### Run Test:
 
+Para ejecutar la aplicacion se puede realziar de dos formas:
+
+1. Crea un entorno virtual e instalar todas los requermientos que se visualizan en el archvio TXT.
+
+2. la aplicación se enciuentra hosteada en la plataforma Heroku a continuzación se adjuntan los url.
+
 Para realizar las pruebas se adjunta link postman con los request
 https://web.postman.co/workspace/My-Workspace~019093d4-f143-4f1d-8770-4ce26c11bb7f/request/19471109-5636d234-9ae2-415b-9af2-fe567e5b53c9
+
+1. Loging: En esta ruta podemos logear el usuario y este nos devolvera un token, el cual se debe utiliza rpara disfurtar de las funcioanlidades de la api. https://projectifytest.herokuapp.com/login.
+
+2. Register:  En esta ruta permite registar un nuevo usuario.
+https://projectifytest.herokuapp.com/register
+
+3. All_Projects: Esta es la ruta inical o por defecto, el cual nos devuelve el listado de los  proyectos en la empresa.
+https://projectifytest.herokuapp.com/
+
+4. Projects_User: Nos regresa el listado de projecto con reporte de dedicación segun el usuario actualmente logeado.
+https://projectifytest.herokuapp.com/projectsuser
+
+5. Insert_Project_Dedication: Esta ruta permite añadir un nuevo reorte de dedicación requeire los siguientes parametros:
+
+Headers:
+Content-Type --> application/json
+x-access-token --> token de longing actual.
+
+Body raw JSON.
+{"percentage":Val, "project_name":"strings"}
+
+https://projectifytest.herokuapp.com/insert_update_dedicacion
+
+6. Update_Project_Dedication: Esta ruta permite actualizar el porcentaje de reporte de dedicación
+
+Headers:
+Content-Type --> application/json
+x-access-token --> token de longing actual.
+
+Body raw JSON.
+{"_id":"String", "date":"String","percentage":Val, "project_name":"string"}
+
+https://projectifytest.herokuapp.com/insert_update_dedicacion
