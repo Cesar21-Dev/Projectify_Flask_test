@@ -44,8 +44,16 @@ https://projectifytest.herokuapp.com/register
 3. All_Projects: Esta es la ruta inical o por defecto, el cual nos devuelve el listado de los  proyectos en la empresa.
 https://projectifytest.herokuapp.com/
 
+Headers:
+Content-Type --> application/json
+x-access-token --> token de longing actual.
+
 4. Projects_User: Nos regresa el listado de projecto con reporte de dedicación segun el usuario actualmente logeado.
 https://projectifytest.herokuapp.com/projectsuser
+
+Headers:
+Content-Type --> application/json
+x-access-token --> token de longing actual.
 
 5. Insert_Project_Dedication: Esta ruta permite añadir un nuevo reorte de dedicación requeire los siguientes parametros:
 
