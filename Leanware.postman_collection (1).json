@@ -1,0 +1,231 @@
+{
+	"info": {
+		"_postman_id": "c9bbaaf4-4d2b-4667-9bc7-fbfa9175f996",
+		"name": "Leanware",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Dev1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Dev213",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://projectifytest.herokuapp.com/login",
+					"protocol": "https",
+					"host": [
+						"projectifytest",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-access-token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwdWJsaWNfaWQiOiIyMjg1ODQwZC01YzMzLTQyMzEtYjA3My1iNzM2ZDEwZTE3NmUiLCJleHAiOjE2NTA4MzE0NjV9.Iq2v3jDZzNBUc37yUUuXXvpnyyi_pbyJH5dwxLPSNQo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"Leanware2022\", \"password\":\"Leanware2022\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://projectifytest.herokuapp.com/register",
+					"protocol": "https",
+					"host": [
+						"projectifytest",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All_Projects",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Dev1234s",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Dev213x",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-access-token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwdWJsaWNfaWQiOiI4ZDg4YTZlYy1lZmI1LTQ1MDQtODNhYS1kOTM0YzU5N2Y0ODgiLCJleHAiOjE2NTEyMzY0MDJ9.s8oy9qFQKeBdLl2J8HjICl8U4OO0BBSRy__jm0ZJ35k",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://projectifytest.herokuapp.com/",
+					"protocol": "https",
+					"host": [
+						"projectifytest",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Projects_User",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-access-token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwdWJsaWNfaWQiOiIyMjg1ODQwZC01YzMzLTQyMzEtYjA3My1iNzM2ZDEwZTE3NmUiLCJleHAiOjE2NTA3NjQ0ODl9.RYyFJfanR91Youy-3YIpq39rPzwfPnUjyq-UiBc3FGA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://projectifytest.herokuapp.com/projectsuser",
+					"protocol": "https",
+					"host": [
+						"projectifytest",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"projectsuser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insert_Project_Dedication",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-access-token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwdWJsaWNfaWQiOiI4ZDg4YTZlYy1lZmI1LTQ1MDQtODNhYS1kOTM0YzU5N2Y0ODgiLCJleHAiOjE2NTA4ODkzOTJ9.QCIIwO2bvBA9bt4iHhcvARsbmx7joN-_4Ek8MjN_Ymk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"percentage\":34, \"project_name\":\"Desarrollo de aplicación de escritorio para la comunicacion entre DeltaV-Hysys\"}"
+				},
+				"url": {
+					"raw": "https://projectifytest.herokuapp.com/insert_update_dedicacion",
+					"protocol": "https",
+					"host": [
+						"projectifytest",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"insert_update_dedicacion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update_Project_Dedication",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-access-token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwdWJsaWNfaWQiOiI4ZDg4YTZlYy1lZmI1LTQ1MDQtODNhYS1kOTM0YzU5N2Y0ODgiLCJleHAiOjE2NTA4ODczMzZ9.2_gCfhOIgEfR_WGS2RNVaGrKqwDq9d9ssoIb6KyPfDI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"_id\":\"62664ca3c9cad202584b197a\", \"date\":\"2022-W17-1\",\"percentage\":98, \"project_name\":\"API de inteligencia artificial para el ahorro energetico\"}"
+				},
+				"url": {
+					"raw": "https://projectifytest.herokuapp.com/insert_update_dedicacion",
+					"protocol": "https",
+					"host": [
+						"projectifytest",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"insert_update_dedicacion"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
