@@ -1,14 +1,14 @@
 # Projectify Test
 
-Es una API RESTful desarrollada utilizando el Framework Flask y base dadato MongoDB, que tiene como objetivo que los usuarios pueda reportar el tiempo de dedicación de los proyectos que esten ejecutando.  La elaboración de este proyecto es un test para optar por el cargo  de  ***Python Backend Developer*.**
+Es una API RESTful desarrollada utilizando el Framework Flask y base de dadatos MongoDB, que tiene como objetivo que los usuarios puedan reportar el porcentaje de dedicación semanal de los proyectos que esten ejecutando.  La elaboración de este proyecto es un test para optar por el cargo  de  ***Python Backend Developer*.**
 
 Acontinuación se indica las funcionalidades de la Api:
 
-- El usuario debe realizar logging para ingresar a las funcionalidades de la API:
+- El usuario debe realizar logging para ingresar a las funcionalidades de la API las cuales son:
 	- Visualizar todos los proyectos de la empresa.
-	- Realizar el reporte de porcentaje de dedicación de los proyectos (Solo se puede realizar una vez por semana por actividad).
+	- Realizar el reporte de porcentaje de dedicación de los proyectos (Solo se puede realizar una vez por semana y por actividad).
 	- EL usuario puede visualizar todos los reporte de dedicación realizados por el.
-	- El usuario puede realizar la modificación de este porcentaje si se ecuentra en el mismo mes calendario cuando realizo el reporte.
+	- El usuario puede realizar la modificación de este porcentaje si se ecuentra en el mismo mes calendario cuando realizó el reporte.
 
 #### **Desarrollo de la solución:**
 >Estructura de la aplicación:
@@ -21,15 +21,15 @@ Acontinuación se indica las funcionalidades de la Api:
 
 Se creo una base de datos en MongoDB Atlas con el nombre ***Projectify_mongo.***, dentro de esta se crearo 3 colletions:
 
-- projectify_projects: En esta  se encuetran todos los proyectos de la empresa tiene los argumentos ** _Id y name.**
-- projectify_report:  En esta se encuentran los  reporte realizados por los usuarios, tiene los argumentos _Id, percentage, date, project_name y username.
-- projectify_users: En esta se encuentra los usuarios registrados, tiene los argumentos  _id, public_id, username, password_salt, password_hash y admin.
+- projectify_projects: Se encuetra todos los proyectos de la empresa, tiene los argumentos ** _Id y name.**
+- projectify_report: Se encuentra los  reporte realizados por los usuarios, tiene los argumentos _Id, percentage, date, project_name y username.
+- projectify_users: Se encuentra los usuarios registrados, tiene los argumentos  _id, public_id, username, password_salt, password_hash y admin.
 
 #### Run Test:
 
 Para ejecutar la aplicacion se puede realziar de dos formas:
 
-1. Crea un entorno virtual e instalar todas los requermientos que se visualizan en el archvio TXT.
+1. Crea un entorno virtual e instalar los requermientos que se visualizan en el archvio requirements.txt.
 
 2. la aplicación se enciuentra hosteada en la plataforma Heroku a continuzación se adjuntan los url.
 
