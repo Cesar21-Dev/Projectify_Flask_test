@@ -33,8 +33,7 @@ Para ejecutar la aplicacion se puede realziar de dos formas:
 
 2. la aplicación se enciuentra hosteada en la plataforma Heroku a continuzación se adjuntan los url.
 
-Para realizar las pruebas se adjunta link postman con los request
-https://web.postman.co/workspace/My-Workspace~019093d4-f143-4f1d-8770-4ce26c11bb7f/request/19471109-5636d234-9ae2-415b-9af2-fe567e5b53c9
+Para realizar las pruebas se adjunta json de postman con los request, puede descarga el archivo Leanware.postman_collection (1).json, e importarlo en su postman. 
 
 1. Loging: En esta ruta podemos logear el usuario y este nos devolvera un token, el cual se debe utiliza rpara disfurtar de las funcioanlidades de la api. https://projectifytest.herokuapp.com/login.
 
